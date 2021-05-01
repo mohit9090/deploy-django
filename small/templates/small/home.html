@@ -1,0 +1,46 @@
+
+{% extends 'small/base.html' %}
+
+{% block content %}
+
+
+<div class="jumbotron">
+	<h1 class="display-4">Hello</h1>
+	{% if request.user.is_authenticated %}
+		{% if request.user %}
+			<p>{{ username }}</p>
+			<p>{{ user_bio }}</p>
+			<a href="{% url 'small:logout' %}" class="btn btn-danger">Logout</a>
+		{% else %}
+			<a href="{% url 'small:login' %}" class="btn btn-primary">Login</a>
+		{% endif %}
+	{% else %}
+		<a href="{% url 'small:login' %}" class="btn btn-primary">Login</a>
+	{% endif %}
+</div>
+
+<div class="container pl-2 pr-2">
+	<div class="d-flex">
+		{% include 'small/page.html' %}
+	</div>
+</div>
+
+<div class="container">
+	<div class="d-flex flex-wrap">
+		{% for product in products %}
+			<div class="card m-3 shadow" style="width: 20rem;">
+			  <img class="card-img-top" src="{{ product.product_pic.url }}" alt="Card image cap">
+			  <div class="card-body border">
+			    <h5 class="card-title">{{ product.name }}</h5>
+			    <p class="card-text">{{ product.price }}</p>
+			    {% for p_tag in product.tags.all %}
+			    	<span class="badge badge-primary">{{ p_tag.name }}</span>
+			    {% endfor %}
+			  </div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+
+
+{% endblock content %}

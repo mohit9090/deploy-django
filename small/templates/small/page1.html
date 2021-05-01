@@ -1,0 +1,19 @@
+
+{% extends 'small/base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+	<h2 class="displlay-2">Page - 1</h2>
+	<div class="container pl-2 pr-2">
+		<div class="d-flex">
+			{% include 'small/page.html' %}
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<p class="font-weight-bold">This page is accessed by only SUPERUSER</p>
+</div>
+
+{% endblock content %}
