@@ -1,0 +1,62 @@
+
+.navbar {
+  background-color:#000;
+}
+.nav-link {
+  color:#fff;
+}
+.nav-link:hover {
+  color:lightgrey;
+}
+
+h2 {
+  color:#152348;
+}
+
+.container {
+  background:#fdfdfd;
+  border:1px solid lightgrey;
+  padding:1.5em 0;
+}
+
+.container form {
+  margin:auto;
+  width:50%;
+  border:1px solid black;
+  padding:1em;
+}
+
+.auth-btn {
+  position:relative;
+  right:0;
+  border-radius:5px;
+  border:1px solid #000;
+  color:#000;
+  background-color:#fff;
+  transition:0.3s ease;
+}
+.auth-btn:hover {
+  color:#fff;
+  background-color:#000;
+}
+
+.article {
+  width:50%;
+  border:1px solid #707070;
+  border-radius:4px;
+  padding:1.5rem 1rem;
+  background-color:#000;
+  margin-bottom:1.8rem;
+}
+
+.title h3 {
+  font-weight:bold;
+  color:#f15a24;
+}
+.content p {
+  color:#fefefe;
+}
+.author small,
+.likes small {
+  color:lightgrey;
+}
