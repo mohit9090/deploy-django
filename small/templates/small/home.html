@@ -29,7 +29,7 @@
 	<div class="d-flex flex-wrap">
 		{% for product in products %}
 			<div class="card m-3 shadow" style="width: 20rem;">
-			  <img class="card-img-top" src="{{ product.product_pic.url }}" alt="Card image cap">
+			  <img class="card-img-top" src="{% static product.product_pic.url %}" alt="Card image cap">
 			  <div class="card-body border">
 			    <h5 class="card-title">{{ product.name }}</h5>
 			    <p class="card-text">{{ product.price }}</p>
